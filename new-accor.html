@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>accordation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "inter", sans-serif;
+        color: #343a40;
+      }
+      .accordation {
+        width: 700px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .icon {
+        width: 23px;
+        height: 24px;
+        stroke: darkgrey;
+      }
+      .icon:hover {
+        cursor: pointer;
+      }
+      .heading {
+        font-size: 24px;
+        font-weight: 500;
+
+        padding: 18px;
+        width: 100%;
+      }
+      .text {
+        line-height: 1.6;
+        margin-bottom: 24px;
+        padding: 20px;
+        grid-column: 2/3;
+      }
+      .hidden {
+        display: none;
+      }
+
+      .item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        padding: 24px;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+      }
+      .number {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .open {
+        border-top: 4px solid green;
+      }
+      .open .hidden-text {
+        display: none;
+      }
+      .open .number,
+      .open .text {
+        color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordation">
+      <div class="item open">
+        <p class="number">01</p>
+        <p class="heading heading-one">SECTION---1</p>
+        <button class="btn show-modal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+        </button>
+        <p class="text hidden one">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+          minima, natus vitae veritatis recusandae vel architecto quas quo quod
+          expedita quae in repellat vero tempore, impedit adipisci eius
+          consequatur eos.
+        </p>
+      </div>
+      <div class="item open">
+        <p class="number">02</p>
+        <p class="heading heading-two">SECTION---2</p>
+        <button class="btn show-modal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+        </button>
+        <p class="text hidden two">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+          minima, natus vitae veritatis recusandae vel architecto quas quo quod
+          expedita quae in repellat vero tempore, impedit adipisci eius
+          consequatur eos.
+        </p>
+      </div>
+      <div class="item open">
+        <p class="number">03</p>
+        <p class="heading heading-three">SECTION---3</p>
+        <button class="btn show-modal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+        </button>
+        <p class="text hidden three">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+          minima, natus vitae veritatis recusandae vel architecto quas quo quod
+          expedita quae in repellat vero tempore, impedit adipisci eius
+          consequatur eos.
+        </p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
